@@ -1,0 +1,258 @@
+.recuperar-container {
+  min-height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.recuperar-box {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* LOGO */
+.recuperar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.recuperar-logo-asterisk {
+  font-size: 1.4rem;
+  color: #a78bfa;
+  line-height: 1;
+}
+
+.recuperar-logo-open {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+.recuperar-logo-kx {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+/* TÍTOL */
+.recuperar-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.recuperar-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.6;
+  margin: 0 0 1.75rem;
+}
+
+/* FORM */
+form {
+  text-align: left;
+  width: 100%;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+
+form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  border-color: rgba(167,139,250,0.5);
+}
+
+form input::placeholder {
+  color: rgba(255,255,255,0.25);
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #7c3aed;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6b21a8;
+}
+
+/* CONFIRMAT */
+.recuperar-confirmat {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recuperar-check {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(167,139,250,0.12);
+  border: 1px solid rgba(167,139,250,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+/* VOLVER */
+.recuperar-volver {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  margin-top: 1.5rem;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.recuperar-volver:hover {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ===== RECUPERAR MOBILE SIZE FIX ===== */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .recuperar-container {
+    padding: 1rem 0.8rem;
+    align-items: center;
+  }
+
+  .recuperar-box {
+    max-width: 100%;
+  }
+
+  .recuperar-logo {
+    gap: 6px;
+    margin-bottom: 1.4rem;
+  }
+
+  .recuperar-logo-asterisk {
+    font-size: 1.15rem;
+  }
+
+  .recuperar-logo-open,
+  .recuperar-logo-kx {
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+  }
+
+  .recuperar-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .recuperar-text {
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin-bottom: 1rem;
+  }
+
+  .recuperar-box form label {
+    font-size: 0.76rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .recuperar-box form input {
+    font-size: 16px !important;
+    padding: 0.72rem 0.85rem;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .recuperar-box form button[type="submit"] {
+    font-size: 0.84rem;
+    padding: 0.78rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .recuperar-check {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 1rem;
+  }
+
+  .recuperar-volver {
+    font-size: 0.72rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .recuperar-container {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .recuperar-logo-open,
+  .recuperar-logo-kx {
+    font-size: 0.86rem;
+  }
+
+  .recuperar-title {
+    font-size: 0.96rem;
+  }
+
+  .recuperar-text,
+  .recuperar-volver,
+  .recuperar-box form label {
+    font-size: 0.68rem;
+  }
+
+  .recuperar-box form button[type="submit"] {
+    font-size: 0.8rem;
+    padding: 0.72rem 0.8rem;
+  }
+
+  .recuperar-check {
+    width: 42px;
+    height: 42px;
+  }
+}

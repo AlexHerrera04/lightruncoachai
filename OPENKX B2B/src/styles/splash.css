@@ -1,0 +1,130 @@
+.splash-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  animation: splash-fadein 0.4s ease forwards;
+}
+
+@keyframes splash-fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.splash-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  animation: splash-up 0.5s ease 0.1s both;
+}
+
+@keyframes splash-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.splash-asterisk {
+  font-size: 4.5rem;
+  color: #a78bfa;
+  line-height: 1;
+}
+
+.splash-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.splash-text-main {
+  color: white;
+}
+
+.splash-text-ai {
+  color: #a78bfa;
+}
+
+.splash-spinner {
+  width: 36px;
+  height: 36px;
+  border: 2.5px solid rgba(255,255,255,0.1);
+  border-top-color: #a78bfa;
+  border-radius: 50%;
+  animation: splash-gir 0.8s linear infinite;
+}
+
+@keyframes splash-gir {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== SPLASH MOBILE SIZE FIX ===== */
+@media (max-width: 768px) {
+  .splash-container {
+    gap: 1.9rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .splash-asterisk {
+    font-size: 3.5rem;
+  }
+
+  .splash-text {
+    font-size: 1.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  .splash-spinner {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-container {
+    gap: 1.45rem;
+    padding: 0.9rem 0.75rem;
+  }
+
+  .splash-logo {
+    gap: 0.4rem;
+  }
+
+  .splash-asterisk {
+    font-size: 2.9rem;
+  }
+
+  .splash-text {
+    font-size: 1.38rem;
+    letter-spacing: 0.03em;
+  }
+
+  .splash-spinner {
+    width: 26px;
+    height: 26px;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 360px) {
+  .splash-asterisk {
+    font-size: 2.5rem;
+  }
+
+  .splash-text {
+    font-size: 1.2rem;
+  }
+
+  .splash-spinner {
+    width: 22px;
+    height: 22px;
+  }
+}

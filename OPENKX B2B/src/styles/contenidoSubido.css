@@ -1,0 +1,223 @@
+.contenido-page {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 1.5rem;
+  padding-top: calc(1.5rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  min-height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.contenido-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenido-volver {
+  background: transparent;
+  border: none;
+  color: #a78bfa;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.contenido-volver:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.contenido-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.contenido-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0 auto;
+  margin-top: 8vh;
+  text-align: center;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 520px;
+  min-height: calc(100vh - 180px);
+  padding: 1.25rem 0;
+}
+
+.contenido-empty-rocket {
+  font-size: 3rem;
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.contenido-empty-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  line-height: 1.25;
+}
+
+.contenido-empty-sub {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 0 0 0.75rem;
+}
+
+.contenido-cta {
+  background: none;
+  border: 1px solid rgba(167,139,250,0.4);
+  color: #c4b5fd;
+  padding: 0.85rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  max-width: 100%;
+}
+
+.contenido-cta:hover {
+  background: rgba(167,139,250,0.1);
+  border-color: rgba(167,139,250,0.6);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .contenido-page {
+    padding: 1.1rem;
+    padding-top: calc(1.1rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(1.1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .contenido-header {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .contenido-volver {
+    padding: 0.15rem 0.25rem;
+    margin-top: 0.05rem;
+  }
+
+  .contenido-title {
+    font-size: 1.15rem;
+    line-height: 1.25;
+  }
+
+  .contenido-empty {
+    margin-top: 4vh;
+    min-height: calc(100vh - 150px);
+    gap: 0.7rem;
+    padding: 0.75rem 0 0;
+  }
+
+  .contenido-empty-rocket {
+    font-size: 2.35rem;
+  }
+
+  .contenido-empty-title {
+    font-size: 1rem;
+  }
+
+  .contenido-empty-sub {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    max-width: 100%;
+    padding: 0 0.2rem;
+  }
+
+  .contenido-cta {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenido-page {
+    padding: 0.9rem;
+    padding-top: calc(0.9rem + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .contenido-header {
+    gap: 0.65rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .contenido-title {
+    font-size: 1rem;
+  }
+
+  .contenido-empty {
+    margin-top: 2vh;
+    min-height: calc(100vh - 130px);
+    gap: 0.65rem;
+  }
+
+  .contenido-empty-rocket {
+    font-size: 2rem;
+  }
+
+  .contenido-empty-title {
+    font-size: 0.96rem;
+  }
+
+  .contenido-empty-sub {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .contenido-cta {
+    width: 100%;
+    font-size: 0.86rem;
+    padding: 0.8rem 0.95rem;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contenido-title {
+    font-size: 0.94rem;
+  }
+
+  .contenido-empty-title {
+    font-size: 0.9rem;
+  }
+
+  .contenido-empty-sub {
+    font-size: 0.78rem;
+  }
+
+  .contenido-cta {
+    font-size: 0.82rem;
+    padding: 0.75rem 0.85rem;
+  }
+}

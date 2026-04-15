@@ -1,0 +1,280 @@
+/* Fondo con imagen */
+.login-background {
+  min-height: 100vh;
+  background-image: url("/iconos/fondologin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.login-card {
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+/* Logotipo CSS */
+.login-logo-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.login-logo-asterisk {
+  font-size: 1.6rem;
+  color: #a78bfa;
+  line-height: 1;
+}
+
+.login-logo-open {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+.login-logo-kx {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+.login-logo-ai {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: 0.08em;
+}
+
+/* Formulario */
+.login-form {
+  width: 100%;
+  color: white;
+}
+
+/* Labels */
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Inputs */
+.login-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  background-color: #0F172A;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Botón submit — només el type submit */
+.login-form button[type="submit"] {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #7c3aed;
+  border: none;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #6b21a8;
+}
+
+/* Enlaces */
+.login-links {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-links a {
+  display: block;
+  color: #a78bfa;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-form input,
+  .login-form button[type="submit"] {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  .login-card {
+    margin: 1rem;
+  }
+}
+
+.login-error {
+  color: #ef4444;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* PASSWORD TOGGLE */
+.login-password-wrap {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.login-password-wrap input {
+  margin-bottom: 0 !important;
+  padding-right: 3rem;
+}
+
+.login-eye-btn {
+  position: absolute;
+  right: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none !important;
+  border: none !important;
+  color: rgba(255,255,255,0.35);
+  cursor: pointer;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.login-eye-btn:hover {
+  background: none !important;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ===== LOGIN MOBILE SIZE FIX ===== */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .login-background {
+    padding: 1rem 0.75rem;
+    align-items: center;
+  }
+
+  .login-card {
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px;
+  }
+
+  .login-logo-text {
+    gap: 6px;
+    margin-top: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .login-logo-asterisk {
+    font-size: 1.2rem;
+  }
+
+  .login-logo-open,
+  .login-logo-kx {
+    font-size: 0.98rem;
+    letter-spacing: 0.05em;
+  }
+
+  .login-form label {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .login-form input {
+    font-size: 16px !important;
+    padding: 0.7rem 0.85rem !important;
+    margin-bottom: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .login-form button[type="submit"] {
+    font-size: 0.85rem !important;
+    padding: 0.75rem 0.85rem !important;
+    border-radius: 10px;
+  }
+
+  .login-links {
+    margin-top: 0.8rem;
+  }
+
+  .login-links a,
+  .login-error {
+    font-size: 0.78rem;
+  }
+
+  .login-password-wrap input {
+    padding-right: 2.6rem;
+  }
+
+  .login-eye-btn {
+    right: 0.8rem;
+    transform: translateY(-50%) scale(0.9);
+  }
+}
+
+@media (max-width: 360px) {
+  .login-background {
+    padding: 0.75rem 0.6rem;
+  }
+
+  .login-card {
+    padding: 1.1rem 0.85rem !important;
+  }
+
+  .login-logo-asterisk {
+    font-size: 1.05rem;
+  }
+
+  .login-logo-open,
+  .login-logo-kx {
+    font-size: 0.9rem;
+  }
+
+  .login-form label,
+  .login-links a,
+  .login-error {
+    font-size: 0.74rem;
+  }
+
+  .login-form button[type="submit"] {
+    font-size: 0.8rem !important;
+    padding: 0.7rem 0.8rem !important;
+  }
+}

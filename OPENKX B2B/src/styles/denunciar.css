@@ -1,0 +1,222 @@
+/* OVERLAY */
+.denunciar-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+/* MODAL */
+.denunciar-modal {
+  background: #1E293B;
+  width: 100%;
+  max-width: 420px;
+  padding: 1.6rem;
+  padding-top: 1rem;
+  border-radius: 22px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.45);
+  animation: slideUp 0.28s ease;
+  font-family: 'Inter', sans-serif !important;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* HANDLE SUPERIOR */
+.denunciar-handle {
+  width: 42px;
+  height: 5px;
+  background: #475569;
+  border-radius: 4px;
+  margin: 0 auto 1rem auto;
+}
+
+/* TÍTULOS */
+.denunciar-modal h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.denunciar-modal h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+/* ALERTA */
+.alerta-falsa {
+  background-color: #2f3e53;
+  border-left: 4px solid #f87171;
+  padding: 0.9rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+}
+
+.alerta-falsa strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #f87171;
+}
+
+/* MOTIVOS */
+.motivos-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.8rem;
+}
+
+.motivos-lista li {
+  margin-bottom: 0.9rem;
+}
+
+.motivos-lista label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.motivos-lista input[type="radio"] {
+  accent-color: #a78bfa;
+}
+
+/* BOTÓN ENVIAR */
+.btn-enviar {
+  width: 100%;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  border: none;
+  padding: 0.9rem;
+  border-radius: 14px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.btn-enviar:active {
+  transform: scale(0.97);
+}
+
+.btn-enviar.disabled {
+  background: #4b5563 !important;
+  cursor: not-allowed !important;
+}
+
+/* TOAST */
+.toast-denuncia {
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1E293B;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  animation: fadeInOut 1.8s ease forwards;
+  z-index: 2000;
+}
+
+/* ANIMACIONES */
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+}
+
+@media (max-width: 480px) {
+  .denunciar-overlay {
+    padding: 0.75rem;
+  }
+
+  .denunciar-modal {
+    max-width: 100%;
+    padding: 1rem;
+    padding-top: 0.8rem;
+    border-radius: 18px;
+    max-height: 82vh;
+  }
+
+  .denunciar-handle {
+    width: 34px;
+    height: 4px;
+    margin-bottom: 0.75rem;
+  }
+
+  .denunciar-modal h2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .denunciar-modal h3 {
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .alerta-falsa {
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 0.78rem;
+  }
+
+  .motivos-lista {
+    margin-bottom: 1.1rem;
+  }
+
+  .motivos-lista li {
+    margin-bottom: 0.65rem;
+  }
+
+  .motivos-lista label {
+    gap: 0.5rem;
+    font-size: 0.82rem;
+  }
+
+  .btn-enviar {
+    padding: 0.78rem;
+    border-radius: 12px;
+    font-size: 0.86rem;
+  }
+
+  .toast-denuncia {
+    bottom: 100px;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    max-width: calc(100% - 2rem);
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .denunciar-modal {
+    padding: 0.85rem;
+  }
+
+  .motivos-lista label,
+  .btn-enviar,
+  .toast-denuncia {
+    font-size: 0.76rem;
+  }
+}

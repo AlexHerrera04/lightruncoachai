@@ -1,0 +1,2120 @@
+/* ============================
+   COACH PAGE
+============================ */
+
+.coach-page {
+  background-color: #0f172a;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================
+   HEADER
+============================ */
+
+.coach-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(12px);
+}
+
+.coach-back {
+  background: transparent;
+  border: none;
+  color: #a78bfa;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.coach-back:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.coach-header-info {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.coach-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  flex-shrink: 0;
+}
+
+.coach-avatar-icon {
+  font-size: 1.3rem;
+}
+
+.coach-header-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.coach-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.coach-status {
+  font-size: 0.72rem;
+  color: #34d399;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.coach-personality-chip-wrap {
+  position: relative;
+  margin-left: auto;
+}
+
+.coach-personality-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 0.55rem 0.75rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  text-align: right;
+}
+
+.coach-personality-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+.coach-personality-chip-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.05;
+}
+
+.coach-personality-chip-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: white;
+}
+
+.coach-personality-chip-subtitle {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.42);
+  margin-top: 2px;
+}
+
+.coach-personality-chip-gear {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  flex-shrink: 0;
+  font-size: 1rem;
+  opacity: 1;
+}
+
+.coach-header-dropdown {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  width: min(300px, calc(100vw - 2rem));
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  z-index: 30;
+  animation: coachFadeIn 0.2s ease;
+}
+
+.coach-mode-back {
+  margin-left: auto;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  transition: 0.2s;
+}
+
+.coach-mode-back:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================
+   WELCOME / MODE SELECTION
+============================ */
+
+.coach-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.75rem 1.5rem 3rem;
+  gap: 1.35rem;
+  flex: 1;
+}
+
+.coach-welcome-with-bottom {
+  padding-bottom: 7.5rem;
+}
+
+.coach-welcome-avatar {
+  font-size: 3.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.coach-welcome-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+.coach-welcome-sub {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.46);
+  text-align: center;
+  margin: 0;
+  max-width: 320px;
+  line-height: 1.55;
+}
+
+.coach-mode-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.coach-mode-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.coach-mode-card:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.45);
+  transform: translateY(-1px);
+}
+
+.coach-mode-card:active {
+  transform: scale(0.98);
+}
+
+.coach-mode-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.coach-mode-card-copy {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  padding-right: 0;
+  padding-bottom: 1.35rem;
+}
+
+.coach-mode-mini-label {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.36);
+  font-weight: 700;
+}
+
+.coach-mode-main-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+  padding-top: 0;
+}
+
+.coach-mode-main-title-conversar {
+  color: #a78bfa;
+}
+
+.coach-mode-main-title-analizar {
+  color: #a78bfa;
+}
+
+.coach-mode-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ============================
+   DROPDOWN ITEMS
+============================ */
+
+.personality-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.75rem 0.8rem;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  transition: 0.2s ease;
+}
+
+.personality-dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(167, 139, 250, 0.2);
+}
+
+.personality-dropdown-item-active {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.personality-dropdown-emoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.personality-dropdown-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.personality-dropdown-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: white;
+}
+
+.personality-dropdown-desc {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.38);
+  margin-top: 2px;
+}
+
+/* ============================
+   CHAT AREA
+============================ */
+
+.coach-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* ============================
+   MESSAGES
+============================ */
+
+.coach-msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  max-width: 88%;
+  animation: coachFadeIn 0.3s ease;
+}
+
+.coach-msg-bot {
+  align-self: flex-start;
+}
+
+.coach-msg-user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.coach-msg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.coach-bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 16px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  word-break: break-word;
+}
+
+.coach-bubble-bot {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.88);
+  border-top-left-radius: 4px;
+}
+
+.coach-bubble-user {
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  color: white;
+  border-top-right-radius: 4px;
+}
+
+/* ============================
+   TYPING INDICATOR
+============================ */
+
+.coach-typing {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.85rem 1.2rem;
+}
+
+.coach-typing .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  animation: coachDot 1.2s infinite ease-in-out;
+}
+
+.coach-typing .dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.coach-typing .dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes coachDot {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ============================
+   LOADING
+============================ */
+
+.coach-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+.coach-loading-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  animation: coachPulse 1.5s infinite ease-in-out;
+}
+
+@keyframes coachPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+/* ============================
+   OPTIONS
+============================ */
+
+.coach-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  animation: coachFadeIn 0.35s ease;
+}
+
+.coach-option {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 0.95rem 1rem;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.28);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.coach-option:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.34);
+  filter: brightness(1.03);
+}
+
+.coach-option:active {
+  transform: scale(0.97);
+}
+
+.coach-option-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.coach-option-more {
+  background: rgba(167, 139, 250, 0.16);
+  border-color: rgba(167, 139, 250, 0.55);
+}
+
+.coach-option-back {
+  background: rgba(167, 139, 250, 0.08);
+  border-color: rgba(167, 139, 250, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================
+   RECOMMENDATIONS
+============================ */
+
+.coach-recs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  animation: coachFadeIn 0.35s ease;
+}
+
+.coach-recs-history {
+  width: 100%;
+}
+
+.coach-rec-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.coach-rec-card:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.coach-rec-card:active {
+  transform: scale(0.98);
+}
+
+.coach-rec-left {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.coach-rec-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.coach-rec-title {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.3;
+}
+
+.coach-rec-type {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-top: 2px;
+  display: block;
+}
+
+.coach-rec-arrow {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+/* ============================
+   END STATE
+============================ */
+
+.coach-end-state {
+  margin-top: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.coach-end-text {
+  margin: 0;
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}
+
+/* ============================
+   ANALYSIS
+============================ */
+
+.coach-analisi {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.analisi-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.analisi-section {
+  border-radius: 12px;
+  padding: 1rem;
+  border-left: 3px solid;
+  animation: coachFadeIn 0.4s ease;
+}
+
+.analisi-primary {
+  background: rgba(99, 102, 241, 0.07);
+  border-color: rgba(99, 102, 241, 0.5);
+}
+
+.analisi-warning {
+  background: rgba(251, 191, 36, 0.07);
+  border-color: rgba(251, 191, 36, 0.5);
+}
+
+.analisi-danger {
+  background: rgba(239, 68, 68, 0.07);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.analisi-success {
+  background: rgba(52, 211, 153, 0.07);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+.analisi-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.analisi-icon {
+  font-size: 1rem;
+}
+
+.analisi-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.analisi-color-primary {
+  color: #818cf8;
+}
+
+.analisi-color-warning {
+  color: #fbbf24;
+}
+
+.analisi-color-danger {
+  color: #f87171;
+}
+
+.analisi-color-success {
+  color: #34d399;
+}
+
+.analisi-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.analisi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.analisi-list li {
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+}
+
+.analisi-list-border li {
+  background: rgba(239, 68, 68, 0.07);
+  border-left: 2px solid rgba(239, 68, 68, 0.4);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.analisi-accions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.analisi-accio-btn {
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.analisi-accio-btn:hover {
+  border-color: rgba(52, 211, 153, 0.4);
+  background: rgba(52, 211, 153, 0.12);
+}
+
+.analisi-accio-arrow {
+  color: #34d399;
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+/* ============================
+   SHARE CARD
+============================ */
+
+.analisi-share-card {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 16px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  animation: coachFadeIn 0.4s ease;
+}
+
+.analisi-share-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.analisi-share-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.analisi-share-words {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.analisi-share-word {
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #a78bfa, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.analisi-share-dot {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.analisi-share-brand {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.08em;
+}
+
+.analisi-share-btn {
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 10px;
+  padding: 0.6rem;
+  color: #c4b5fd;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.analisi-share-btn:hover {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+.analisi-share-actions {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.analisi-share-btn-secondary {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.analisi-share-btn-whatsapp {
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.28);
+  color: #86efac;
+}
+
+.analisi-share-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.analisi-share-btn-whatsapp:hover {
+  background: rgba(34, 197, 94, 0.18);
+}
+
+@media (max-width: 480px) {
+  .analisi-share-actions {
+    flex-direction: column;
+  }
+}
+/* ============================
+   FOLLOW-UP
+============================ */
+
+.analisi-seguiment {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  animation: coachFadeIn 0.4s ease;
+}
+
+.analisi-seguiment-q {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 500;
+}
+
+.analisi-seguiment-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.analisi-seg-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.analisi-seg-si {
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  color: #34d399;
+}
+
+.analisi-seg-no {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #f87171;
+}
+
+.analisi-seg-si.actiu {
+  background: rgba(52, 211, 153, 0.25);
+  border-color: rgba(52, 211, 153, 0.5);
+}
+
+.analisi-seg-no.actiu {
+  background: rgba(239, 68, 68, 0.25);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.analisi-seguiment-resp {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.positiu {
+  background: rgba(52, 211, 153, 0.08);
+  color: #34d399;
+}
+
+.negatiu {
+  background: rgba(239, 68, 68, 0.08);
+  color: #f87171;
+}
+
+/* ============================
+   FEEDBACK
+============================ */
+
+.analisi-feedback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  animation: coachFadeIn 0.4s ease;
+}
+
+.analisi-feedback-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.analisi-feedback-btns {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.analisi-fb-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.35rem 0.65rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.analisi-fb-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.analisi-fb-actiu {
+  background: rgba(167, 139, 250, 0.15);
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+/* ============================
+   ANIMATIONS
+============================ */
+
+@keyframes coachFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================
+   ANALISI BLOCKED (límit diari)
+============================ */
+
+.analisi-blocked-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.analisi-blocked-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.analisi-blocked-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+.analisi-blocked-desc {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  max-width: 320px;
+  line-height: 1.55;
+}
+
+/* ============================
+   ANALISI HISTORIAL
+============================ */
+
+.analisi-historial-wrap {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 1.25rem;
+}
+
+.analisi-historial-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.75rem;
+  text-align: left;
+}
+
+.analisi-historial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.analisi-historial-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+  text-align: left;
+  gap: 0.5rem;
+}
+
+.analisi-historial-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.analisi-historial-item-active {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.analisi-historial-date {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: white;
+  flex: 1;
+}
+
+.analisi-historial-time {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.analisi-historial-arrow {
+  font-size: 0.7rem;
+  color: #8b5cf6;
+  margin-left: 0.25rem;
+}
+
+.analisi-historial-detail {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding-top: 1.5rem;
+}
+
+.analisi-historial-detail-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1rem;
+}
+
+.analisi-historial-detail .analisi-section {
+  margin-bottom: 1rem;
+}
+
+.analisi-historial-detail .analisi-share-card,
+.analisi-historial-detail .analisi-seguiment,
+.analisi-historial-detail .analisi-feedback {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .coach-welcome {
+    padding: 2rem 1rem 2.2rem;
+    gap: 1rem;
+  }
+
+  .coach-welcome-avatar {
+    font-size: 2.5rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .coach-welcome-title {
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .coach-welcome-sub {
+    font-size: 0.92rem;
+    max-width: 300px;
+    line-height: 1.5;
+  }
+
+  .coach-mode-cards {
+    gap: 0.7rem;
+    margin-top: 0.45rem;
+  }
+
+  .coach-mode-card {
+    gap: 0.75rem;
+    padding: 0.95rem;
+    border-radius: 14px;
+  }
+
+  .coach-mode-icon {
+    font-size: 1.45rem;
+    margin-top: 1px;
+  }
+
+  .coach-mode-card-copy {
+    padding-right: 0;
+    padding-bottom: 1.2rem;
+  }
+
+   .coach-mode-mini-label {
+    font-size: 0.58rem;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+
+  .coach-mode-main-title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+  }
+
+ .coach-mode-desc {
+    font-size: 0.74rem;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .coach-welcome {
+    padding: 1.5rem 0.85rem 1.8rem;
+    gap: 0.85rem;
+  }
+
+  .coach-welcome-avatar {
+    font-size: 2rem;
+  }
+
+  .coach-welcome-title {
+    font-size: 0.96rem;
+  }
+
+  .coach-welcome-sub {
+    font-size: 0.72rem;
+    max-width: 240px;
+    line-height: 1.38;
+  }
+
+  .coach-mode-cards {
+    gap: 0.6rem;
+    margin-top: 0.35rem;
+  }
+
+  .coach-mode-card {
+    gap: 0.65rem;
+    padding: 0.8rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .coach-mode-icon {
+    font-size: 1.2rem;
+  }
+
+   .coach-mode-card-copy {
+    padding-right: 0;
+    padding-bottom: 1.1rem;
+  }
+
+  .coach-mode-mini-label {
+    font-size: 0.52rem;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+
+  .coach-mode-main-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .coach-mode-desc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-welcome {
+    padding: 1.3rem 0.7rem 1.6rem;
+  }
+
+  .coach-welcome-avatar {
+    font-size: 1.8rem;
+  }
+
+  .coach-welcome-title {
+    font-size: 0.9rem;
+  }
+
+   .coach-welcome-sub {
+    font-size: 0.78rem;
+    max-width: 220px;
+  }
+
+  .coach-mode-card {
+    padding: 0.72rem 0.68rem;
+  }
+
+  .coach-mode-icon {
+    font-size: 1.08rem;
+  }
+
+   .coach-mode-card-copy {
+    padding-right: 0;
+    padding-bottom: 1rem;
+  }
+
+   .coach-mode-mini-label {
+    font-size: 0.48rem;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+
+  .coach-mode-main-title {
+    font-size: 0.86rem;
+  }
+
+  .coach-mode-desc {
+    font-size: 0.64rem;
+  }
+}
+
+/* =========================================
+   AGENTE COACH — HEADER MOBILE FINAL FIX
+========================================= */
+
+@media (max-width: 768px) {
+  .coach-header {
+    gap: 0.65rem !important;
+    padding: 0.92rem 1rem !important;
+    align-items: center !important;
+  }
+
+  .coach-back {
+    padding: 0.14rem !important;
+    flex: 0 0 auto !important;
+  }
+
+  .coach-header-info {
+    gap: 0.58rem !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+  }
+
+  .coach-header-copy {
+    min-width: 0 !important;
+  }
+
+  .coach-avatar {
+    width: 36px !important;
+    height: 36px !important;
+    flex: 0 0 36px !important;
+  }
+
+  .coach-avatar-icon {
+    font-size: 1.05rem !important;
+  }
+
+  .coach-name {
+    font-size: 0.86rem !important;
+    line-height: 1.08 !important;
+    margin: 0 !important;
+  }
+
+  .coach-status {
+    font-size: 0.6rem !important;
+    margin-top: 1px !important;
+    line-height: 1 !important;
+  }
+
+  .coach-personality-chip-wrap {
+    margin-left: 0.45rem !important;
+    flex: 0 0 auto !important;
+  }
+
+  .coach-personality-chip {
+    gap: 0.4rem !important;
+    padding: 0.44rem 0.55rem !important;
+    border-radius: 11px !important;
+    max-width: 165px !important;
+  }
+
+  .coach-personality-chip-copy {
+    line-height: 1.02 !important;
+    min-width: 0 !important;
+  }
+
+  .coach-personality-chip-title {
+    font-size: 0.72rem !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .coach-personality-chip-subtitle {
+    font-size: 0.56rem !important;
+    margin-top: 1px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  .coach-personality-chip-gear {
+    width: 31px !important;
+    height: 31px !important;
+    flex: 0 0 31px !important;
+    font-size: 0.74rem !important;
+  }
+
+  .coach-header-dropdown {
+    width: min(235px, calc(100vw - 1rem)) !important;
+    top: calc(100% + 0.34rem) !important;
+    right: 0 !important;
+    border-radius: 10px !important;
+    padding: 0.34rem !important;
+  }
+
+  .personality-dropdown-item {
+    gap: 0.48rem !important;
+    padding: 0.58rem 0.6rem !important;
+    border-radius: 8px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .coach-header {
+    gap: 0.56rem !important;
+    padding: 0.84rem 0.86rem !important;
+  }
+
+  .coach-avatar {
+    width: 32px !important;
+    height: 32px !important;
+    flex: 0 0 32px !important;
+  }
+
+  .coach-avatar-icon {
+    font-size: 0.94rem !important;
+  }
+
+  .coach-name {
+    font-size: 0.8rem !important;
+  }
+
+  .coach-status {
+    font-size: 0.56rem !important;
+  }
+
+  .coach-personality-chip {
+    gap: 0.34rem !important;
+    padding: 0.38rem 0.46rem !important;
+    border-radius: 10px !important;
+    max-width: 148px !important;
+  }
+
+  .coach-personality-chip-title {
+    font-size: 0.66rem !important;
+  }
+
+  .coach-personality-chip-subtitle {
+    font-size: 0.52rem !important;
+  }
+
+  .coach-personality-chip-gear {
+    width: 28px !important;
+    height: 28px !important;
+    flex: 0 0 28px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .coach-header-dropdown {
+    width: min(215px, calc(100vw - 0.8rem)) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-header {
+    padding: 0.74rem 0.72rem !important;
+  }
+
+  .coach-avatar {
+    width: 30px !important;
+    height: 30px !important;
+    flex: 0 0 30px !important;
+  }
+
+  .coach-avatar-icon {
+    font-size: 0.86rem !important;
+  }
+
+  .coach-name {
+    font-size: 0.76rem !important;
+  }
+
+  .coach-status {
+    font-size: 0.52rem !important;
+  }
+
+  .coach-personality-chip {
+    max-width: 136px !important;
+    padding: 0.34rem 0.4rem !important;
+  }
+
+  .coach-personality-chip-title {
+    font-size: 0.62rem !important;
+  }
+
+  .coach-personality-chip-subtitle {
+    font-size: 0.48rem !important;
+  }
+
+  .coach-personality-chip-gear {
+    width: 26px !important;
+    height: 26px !important;
+    flex: 0 0 26px !important;
+    font-size: 0.62rem !important;
+  }
+}
+
+/* =========================================
+   AGENTE COACH — CHAT MOBILE FINAL FIX
+========================================= */
+
+@media (max-width: 768px) {
+  .coach-mode-back {
+    font-size: 0.68rem !important;
+    padding: 0.26rem 0.62rem !important;
+    border-radius: 16px !important;
+  }
+
+  .coach-chat {
+    padding: 1rem 0.85rem 1.5rem !important;
+    gap: 0.6rem !important;
+  }
+
+  .coach-msg {
+    gap: 0.42rem !important;
+    max-width: 92% !important;
+  }
+
+  .coach-msg-avatar {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 0.72rem !important;
+    margin-top: 1px !important;
+  }
+
+  .coach-bubble {
+    padding: 0.62rem 0.82rem !important;
+    border-radius: 14px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .coach-typing {
+    padding: 0.7rem 0.9rem !important;
+    gap: 3px !important;
+  }
+
+  .coach-typing .dot {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .coach-option {
+    padding: 0.78rem 0.85rem !important;
+    border-radius: 13px !important;
+    font-size: 0.82rem !important;
+    gap: 0.55rem !important;
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.22) !important;
+  }
+
+  .coach-option-icon {
+    font-size: 0.92rem !important;
+  }
+
+  .coach-rec-card {
+    padding: 0.72rem 0.82rem !important;
+    border-radius: 10px !important;
+  }
+
+  .coach-rec-left {
+    gap: 0.55rem !important;
+  }
+
+  .coach-rec-num {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .coach-rec-title {
+    font-size: 0.76rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .coach-rec-type {
+    font-size: 0.6rem !important;
+  }
+
+  .coach-rec-arrow {
+    font-size: 1.1rem !important;
+    margin-left: 0.35rem !important;
+  }
+
+  .coach-end-state {
+    padding: 0.75rem 0.85rem !important;
+    border-radius: 10px !important;
+  }
+
+  .coach-end-text {
+    font-size: 0.74rem !important;
+  }
+
+  .coach-analisi {
+    padding: 1rem 0.85rem 1.5rem !important;
+  }
+
+  .analisi-section {
+    padding: 0.82rem !important;
+    border-radius: 10px !important;
+  }
+
+  .analisi-title {
+    font-size: 0.64rem !important;
+  }
+
+  .analisi-text,
+  .analisi-list li,
+  .analisi-accio-btn {
+    font-size: 0.76rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .analisi-accio-btn {
+    padding: 0.55rem 0.72rem !important;
+    border-radius: 8px !important;
+  }
+
+  .analisi-share-card {
+    padding: 0.95rem !important;
+    border-radius: 12px !important;
+    gap: 0.65rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .coach-mode-back {
+    font-size: 0.62rem !important;
+    padding: 0.22rem 0.55rem !important;
+  }
+
+  .coach-chat {
+    padding: 0.82rem 0.72rem 1.35rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .coach-msg {
+    max-width: 94% !important;
+    gap: 0.35rem !important;
+  }
+
+  .coach-msg-avatar {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.64rem !important;
+  }
+
+  .coach-bubble {
+    padding: 0.56rem 0.72rem !important;
+    border-radius: 13px !important;
+    font-size: 0.72rem !important;
+    line-height: 1.38 !important;
+  }
+
+  .coach-option {
+    padding: 0.68rem 0.72rem !important;
+    border-radius: 12px !important;
+    font-size: 0.74rem !important;
+    gap: 0.45rem !important;
+  }
+
+  .coach-option-icon {
+    font-size: 0.84rem !important;
+  }
+
+  .coach-rec-card {
+    padding: 0.64rem 0.72rem !important;
+  }
+
+  .coach-rec-num {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 0.62rem !important;
+  }
+
+  .coach-rec-title {
+    font-size: 0.7rem !important;
+  }
+
+  .coach-rec-type {
+    font-size: 0.56rem !important;
+  }
+
+  .coach-rec-arrow {
+    font-size: 1rem !important;
+  }
+
+  .coach-end-text,
+  .analisi-text,
+  .analisi-list li,
+  .analisi-accio-btn {
+    font-size: 0.7rem !important;
+  }
+
+  .analisi-title {
+    font-size: 0.6rem !important;
+  }
+
+  .analisi-section {
+    padding: 0.72rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-chat {
+    padding: 0.75rem 0.62rem 1.2rem !important;
+  }
+
+  .coach-mode-back {
+    font-size: 0.58rem !important;
+    padding: 0.2rem 0.5rem !important;
+  }
+
+  .coach-bubble {
+    font-size: 0.68rem !important;
+    padding: 0.5rem 0.65rem !important;
+  }
+
+  .coach-option {
+    font-size: 0.7rem !important;
+    padding: 0.62rem 0.66rem !important;
+  }
+
+  .coach-rec-title,
+  .coach-end-text,
+  .analisi-text,
+  .analisi-list li,
+  .analisi-accio-btn {
+    font-size: 0.66rem !important;
+  }
+
+  .coach-rec-type,
+  .analisi-title {
+    font-size: 0.54rem !important;
+  }
+}
+
+/* =========================================
+   AGENTE COACH — OPTIONS + BLOCKED MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .coach-options {
+    gap: 0.4rem !important;
+    margin-top: 0.15rem !important;
+  }
+
+  .coach-option {
+    padding: 0.72rem 0.8rem !important;
+    border-radius: 12px !important;
+    font-size: 0.78rem !important;
+    gap: 0.5rem !important;
+    box-shadow: 0 5px 16px rgba(139, 92, 246, 0.18) !important;
+  }
+
+  .coach-option-icon {
+    font-size: 0.88rem !important;
+  }
+
+  .coach-end-state {
+    margin-top: 0.35rem !important;
+    padding: 0.72rem 0.82rem !important;
+    border-radius: 10px !important;
+  }
+
+  .coach-end-text {
+    font-size: 0.72rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .analisi-blocked-wrap {
+    padding: 1.8rem 1rem 1.4rem !important;
+    gap: 0.55rem !important;
+  }
+
+  .analisi-blocked-icon {
+    font-size: 1.9rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+
+  .analisi-blocked-title {
+    font-size: 0.96rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .analisi-blocked-desc {
+    font-size: 0.76rem !important;
+    max-width: 260px !important;
+    line-height: 1.4 !important;
+  }
+
+  .analisi-historial-wrap {
+    margin-top: 0.9rem !important;
+    max-width: 100% !important;
+  }
+
+  .analisi-historial-label {
+    font-size: 0.68rem !important;
+    margin-bottom: 0.55rem !important;
+  }
+
+  .analisi-historial-list {
+    gap: 0.35rem !important;
+  }
+
+  .analisi-historial-item {
+    padding: 0.6rem 0.75rem !important;
+    border-radius: 9px !important;
+    gap: 0.35rem !important;
+  }
+
+  .analisi-historial-date {
+    font-size: 0.74rem !important;
+  }
+
+  .analisi-historial-time {
+    font-size: 0.66rem !important;
+  }
+
+  .analisi-historial-arrow {
+    font-size: 0.62rem !important;
+  }
+
+  .analisi-historial-detail {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .analisi-historial-detail-label {
+    font-size: 0.66rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .coach-options {
+    gap: 0.35rem !important;
+  }
+
+  .coach-option {
+    padding: 0.64rem 0.72rem !important;
+    border-radius: 11px !important;
+    font-size: 0.72rem !important;
+    gap: 0.42rem !important;
+  }
+
+  .coach-option-icon {
+    font-size: 0.8rem !important;
+  }
+
+  .coach-end-state {
+    padding: 0.64rem 0.72rem !important;
+  }
+
+  .coach-end-text {
+    font-size: 0.68rem !important;
+  }
+
+  .analisi-blocked-wrap {
+    padding: 1.5rem 0.8rem 1.15rem !important;
+    gap: 0.45rem !important;
+  }
+
+  .analisi-blocked-icon {
+    font-size: 1.65rem !important;
+  }
+
+  .analisi-blocked-title {
+    font-size: 0.86rem !important;
+  }
+
+  .analisi-blocked-desc {
+    font-size: 0.7rem !important;
+    max-width: 220px !important;
+    line-height: 1.35 !important;
+  }
+
+  .analisi-historial-label {
+    font-size: 0.62rem !important;
+  }
+
+  .analisi-historial-item {
+    padding: 0.52rem 0.62rem !important;
+  }
+
+  .analisi-historial-date {
+    font-size: 0.68rem !important;
+  }
+
+  .analisi-historial-time {
+    font-size: 0.6rem !important;
+  }
+
+  .analisi-historial-detail-label {
+    font-size: 0.62rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-option {
+    font-size: 0.68rem !important;
+    padding: 0.58rem 0.66rem !important;
+  }
+
+  .coach-option-icon {
+    font-size: 0.76rem !important;
+  }
+
+  .coach-end-text {
+    font-size: 0.64rem !important;
+  }
+
+  .analisi-blocked-title {
+    font-size: 0.8rem !important;
+  }
+
+  .analisi-blocked-desc,
+  .analisi-historial-date {
+    font-size: 0.64rem !important;
+  }
+
+  .analisi-historial-time,
+  .analisi-historial-detail-label,
+  .analisi-historial-label {
+    font-size: 0.58rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .coach-options {
+    align-items: center !important;
+    gap: 0.4rem !important;
+  }
+
+  .coach-option {
+    width: 260px !important;
+    max-width: 90% !important;
+    min-width: 260px !important;
+    align-self: center !important;
+    justify-content: flex-start !important;
+    padding: 0.72rem 0.9rem !important;
+    font-size: 0.78rem !important;
+    border-radius: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .coach-option {
+    width: 230px !important;
+    min-width: 230px !important;
+    max-width: 88% !important;
+    padding: 0.64rem 0.82rem !important;
+    font-size: 0.72rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-option {
+    width: 210px !important;
+    min-width: 210px !important;
+    max-width: 84% !important;
+    padding: 0.58rem 0.74rem !important;
+    font-size: 0.68rem !important;
+  }
+}
+
+/* ===== COACH MOBILE SIZE FIX ===== */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .coach-chat,
+  .coach-analisi {
+    padding: 0.7rem 0.6rem 1rem !important;
+  }
+
+  .coach-msg {
+    max-width: 100% !important;
+    gap: 0.3rem !important;
+  }
+
+  .coach-msg-avatar {
+    width: 20px !important;
+    height: 20px !important;
+    font-size: 0.56rem !important;
+    margin-top: 1px !important;
+  }
+
+  .coach-bubble {
+    max-width: calc(100vw - 56px) !important;
+    padding: 0.48rem 0.62rem !important;
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+    border-radius: 12px !important;
+  }
+
+  .coach-rec-card,
+  .coach-end-state,
+  .analisi-section,
+  .analisi-share-card,
+  .analisi-seguiment,
+  .analisi-feedback,
+  .analisi-historial-item,
+  .analisi-historial-detail {
+    padding: 0.7rem !important;
+    border-radius: 10px !important;
+  }
+
+  .coach-rec-title,
+  .coach-end-text,
+  .analisi-text,
+  .analisi-list li,
+  .analisi-accio-btn,
+  .analisi-seguiment-q,
+  .analisi-feedback-label,
+  .analisi-seguiment-resp,
+  .analisi-historial-date {
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .analisi-title,
+  .coach-rec-type,
+  .analisi-share-label,
+  .analisi-share-brand,
+  .analisi-historial-label,
+  .analisi-historial-time,
+  .analisi-historial-detail-label {
+    font-size: 0.56rem !important;
+  }
+
+  .analisi-share-word {
+    font-size: 0.88rem !important;
+  }
+
+  .analisi-seguiment-btns,
+  .analisi-feedback-btns {
+    flex-direction: column !important;
+  }
+
+  .analisi-seg-btn,
+  .analisi-fb-btn,
+  .analisi-accio-btn {
+    font-size: 0.68rem !important;
+    padding: 0.52rem 0.65rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-chat,
+  .coach-analisi {
+    padding: 0.6rem 0.5rem 0.9rem !important;
+  }
+
+  .coach-msg-avatar {
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 0.5rem !important;
+  }
+
+  .coach-bubble {
+    max-width: calc(100vw - 50px) !important;
+    font-size: 0.64rem !important;
+    padding: 0.44rem 0.58rem !important;
+  }
+
+  .coach-rec-title,
+  .coach-end-text,
+  .analisi-text,
+  .analisi-list li,
+  .analisi-accio-btn,
+  .analisi-seguiment-q,
+  .analisi-feedback-label,
+  .analisi-seguiment-resp,
+  .analisi-historial-date {
+    font-size: 0.64rem !important;
+  }
+
+  .analisi-title,
+  .coach-rec-type,
+  .analisi-share-label,
+  .analisi-share-brand,
+  .analisi-historial-label,
+  .analisi-historial-time,
+  .analisi-historial-detail-label {
+    font-size: 0.52rem !important;
+  }
+
+  .analisi-share-word {
+    font-size: 0.8rem !important;
+  }
+}

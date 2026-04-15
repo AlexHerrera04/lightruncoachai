@@ -1,0 +1,236 @@
+/* ============================
+   BARRA INFERIOR
+============================ */
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: #1D2939;
+  padding: 0.35rem 0.5rem calc(0.35rem + env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-top: 1px solid #334155;
+  z-index: 3000;
+  overflow-x: hidden;
+}
+
+/* ============================
+   BOTONES
+============================ */
+
+.bottom-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  line-height: 1;
+  min-width: 0;
+  flex: 1;
+  padding: 0;
+}
+
+.bottom-btn span {
+  font-size: 0.65rem;
+  margin-top: 0.15rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bottom-btn.active span {
+  color: #a78bfa;
+}
+
+.bottom-btn:hover span {
+  color: #c4b5fd;
+}
+
+/* ============================
+   ICONOS BASE
+============================ */
+
+.icono-inicio,
+.icono-explorar,
+.icono-crear,
+.icono-desafio,
+.icono-miadn {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 0.15rem;
+  filter: brightness(0) invert(1);
+}
+
+/* ============================
+   ICONOS SVG BLANCOS
+============================ */
+
+.icono-inicio {
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <path d='M3 9.75L12 3l9 6.75V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V9.75z'/>\
+  </svg>");
+}
+
+.icono-explorar {
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <circle cx='11' cy='11' r='7'/>\
+    <line x1='16.65' y1='16.65' x2='21' y2='21' stroke='white' stroke-width='2' stroke-linecap='round'/>\
+  </svg>");
+}
+
+/* ============================
+   ICONO + (BLANC)
+============================ */
+
+.icono-crear {
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <line x1='12' y1='5' x2='12' y2='19' stroke='white' stroke-width='3.5' stroke-linecap='round'/>\
+    <line x1='5' y1='12' x2='19' y2='12' stroke='white' stroke-width='3.5' stroke-linecap='round'/>\
+  </svg>");
+}
+
+/* ============================
+   ICONO DESAFÍO
+============================ */
+
+.icono-desafio {
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='white' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <path d='M7 4h10v7a5 5 0 0 1-10 0V4z' fill='white' stroke='none'/>\
+    <path d='M7 6H4a1 1 0 0 0-1 1v1a3 3 0 0 0 3 3h1' fill='none'/>\
+    <path d='M17 6h3a1 1 0 0 1 1 1v1a3 3 0 0 1-3 3h-1' fill='none'/>\
+    <line x1='12' y1='16' x2='12' y2='19' stroke='white' stroke-width='2'/>\
+    <rect x='8' y='19' width='8' height='2' rx='1' fill='white' stroke='none'/>\
+  </svg>");
+}
+
+/* ============================
+   ICONO MI ADN
+============================ */
+
+.icono-miadn {
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='none' stroke='white' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <polyline points='3,17 8,12 13,15 21,6' stroke-linecap='round' stroke-linejoin='round'/>\
+    <circle cx='3' cy='17' r='1.5' fill='white'/>\
+    <circle cx='8' cy='12' r='1.5' fill='white'/>\
+    <circle cx='13' cy='15' r='1.5' fill='white'/>\
+    <circle cx='21' cy='6' r='1.5' fill='white'/>\
+  </svg>");
+}
+
+/* ============================
+   BOTÓN CENTRAL — LILA + ICONO BLANCO
+============================ */
+
+.boton-central {
+  position: relative;
+  margin-top: -32px !important;
+  background-color: #a78bfa;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.45);
+  transition: 0.25s ease;
+  flex: 0 0 auto;
+}
+
+.boton-central .icono-crear {
+  width: 32px;
+  height: 32px;
+  background-size: 80%;
+  filter: brightness(0) invert(1);
+}
+
+.boton-central:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(167,139,250,0.6);
+}
+
+.boton-central.active {
+  background-color: #8b5cf6;
+}
+
+/* ============================
+   ICONO ACTIVO
+============================ */
+
+.bottom-btn.active span {
+  filter: brightness(0) saturate(100%) invert(78%) sepia(14%) saturate(1294%) hue-rotate(217deg) brightness(102%) contrast(101%);
+}
+
+@media (max-width: 480px) {
+  .bottom-bar {
+    padding: 0.3rem 0.25rem calc(0.35rem + env(safe-area-inset-bottom));
+  }
+
+  .bottom-btn span {
+    font-size: 0.58rem;
+  }
+
+  .icono-inicio,
+  .icono-explorar,
+  .icono-desafio,
+  .icono-miadn {
+    width: 34px;
+    height: 34px;
+    background-size: 68%;
+  }
+
+  .boton-central {
+    width: 54px;
+    height: 54px;
+    margin-top: -24px !important;
+  }
+
+  .boton-central .icono-crear {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .bottom-btn span {
+    font-size: 0.52rem;
+  }
+
+  .icono-inicio,
+  .icono-explorar,
+  .icono-desafio,
+  .icono-miadn {
+    width: 30px;
+    height: 30px;
+  }
+
+  .boton-central {
+    width: 50px;
+    height: 50px;
+    margin-top: -24px !important;
+  }
+}
+
+.bottom-btn:nth-child(2) {
+  transform: translateX(-6px);
+}
+
+.bottom-btn:nth-child(4) {
+  transform: translateX(6px);
+}

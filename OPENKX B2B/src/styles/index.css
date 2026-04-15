@@ -1,0 +1,123 @@
+html, body, #root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #101828;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* MODO CLARO */
+
+body.light {
+  background-color: #f5f7fa;
+  color: #1e293b;
+}
+
+body.light .inicio-container,
+body.light .perfil-fullscreen,
+body.light .contenido-page,
+body.light .miadn-page {
+  background-color: #f5f7fa;
+  color: #1e293b;
+}
+
+body.light .card,
+body.light .section-row,
+body.light .perfil-bloque,
+body.light .perfil-item,
+body.light .contenido-empty,
+body.light .miadn-section,
+body.light .metas-caja,
+body.light .madurez-caja {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  color: #1e293b;
+}
+
+body.light .blob-unic {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.25);
+}
+
+body.light .blob-unic.obert {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4 {
+  color: #1e293b;
+}
+
+body.light p,
+body.light span,
+body.light .inicio-subtitle,
+body.light .section-text p,
+body.light .perfil-subtitle {
+  color: #475569;
+}
+
+body.light .section-tag {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+body.light button,
+body.light .volver-button,
+body.light .perfil-boton {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+  transition: 0.2s ease;
+}
+
+body.light button:hover {
+  background-color: #d8dce3;
+}
+
+body.light .btn-primary {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+}
+
+body.light .btn-primary:hover {
+  background-color: #4f46e5;
+}
+
+body.light .bottom-bar {
+  background-color: #ffffff;
+  border-top: 1px solid #cbd5e1;
+}
+
+body.light .bottom-bar button {
+  color: #1e293b;
+}
+
+body.light img {
+  filter: none;
+}
+
+body.light .icon-dark {
+  filter: invert(1) brightness(0.2);
+}

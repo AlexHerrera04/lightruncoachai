@@ -1,0 +1,89 @@
+/* CONTENEDOR GENERAL */
+.acceso-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* TARJETA PRINCIPAL */
+.acceso-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 380px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* TÍTULO */
+.acceso-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 6px rgba(0,0,0,1); 
+}
+
+/* SUBTÍTULO */
+.acceso-subtitle {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  text-shadow: 0px 0px 6px rgba(0,0,0,1);
+}
+
+/* TEXTO */
+.acceso-text {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  text-shadow: 0px 0px 6px rgba(0,0,0,1);
+}
+
+/* BOTÓN PRINCIPAL */
+.acceso-btn {
+  width: 100%;
+  padding: 12px;
+  background: #a78bfa; 
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: 0.2s ease;
+  text-shadow: 0px 0px 6px rgba(0,0,0,1);
+}
+
+.acceso-btn:hover {
+  background: #8b6df0;
+}
+
+/* BOTÓN VOLVER */
+.acceso-volver {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-shadow: 0px 0px 6px rgba(0,0,0,1);
+}
+
+.acceso-volver:hover {
+  background: rgba(255,255,255,0.2);
+}
+

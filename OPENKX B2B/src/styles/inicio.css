@@ -1,0 +1,577 @@
+/* CONTENEDOR GENERAL */
+.inicio-container {
+  background-color: #101828;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: clamp(1rem, 4vw, 2rem);
+  padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.inicio-brand-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #a78bfa;
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-top: 0.35rem;
+}
+
+.inicio-heading {
+  min-width: 0;
+}
+
+.inicio-title {
+  font-size: 1.6rem;
+  margin: 0;
+  margin-top: 0.2rem;
+}
+
+.inicio-subtitle {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0.4rem 0 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-button img {
+  width: 34px;
+  height: 34px;
+}
+
+/* 3 BLOQUES EN UNA SOLA LÍNEA */
+.info-horizontal {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.75rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* CADA BLOQUE CENTRADO PERFECTAMENTE */
+.info-block {
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TÍTULO */
+.info-block h4 {
+  margin: 0;
+  font-size: clamp(0.72rem, 2.8vw, 0.85rem);
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* NÚMERO */
+.info-block p {
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.05rem, 5vw, 1.6rem);
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  width: 100%;
+  line-height: 1.1;
+}
+
+/* MENSAJE MOTIVACIONAL */
+.motivacion {
+  margin-top: 0.2rem;
+  font-size: clamp(0.62rem, 2.4vw, 0.85rem);
+  color: #38bdf8;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+}
+
+/* FORZAR UNA SOLA LÍNEA EN MI ADN */
+.adn-line {
+  white-space: nowrap;
+}
+
+/* SECCIONES INTERACTIVAS */
+.section-row {
+  background-color: #1D2939;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 72px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.section-row:hover {
+  background-color: #273549;
+  transform: translateX(2px);
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.section-text h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section-text p {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.section-tag-group {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  width: 70px;
+  text-align: center;
+}
+
+.section-arrow {
+  font-size: 1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* COLORES */
+.tag-quiz { background-color: #10b981; }
+.tag-explorar { background-color: #8b5cf6; }
+.tag-metas { background-color: #f59e0b; }
+.tag-adn { background-color: #6366f1; }
+.tag-actividad { background-color: #0ea5e9; }
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .inicio-container {
+    padding: 1rem 1rem calc(92px + env(safe-area-inset-bottom));
+  }
+
+  .header {
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .header-left {
+    gap: 0.55rem;
+  }
+
+  .inicio-brand-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1.45rem;
+    margin-top: 0.1rem;
+  }
+
+  .inicio-title {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  .inicio-subtitle {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
+  .header-right {
+    gap: 0.4rem;
+  }
+
+  .icon-button {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icono-notis,
+  .icono-perfil,
+  .coach-button .icono-coach {
+    width: 28px;
+    height: 28px;
+    background-size: 82%;
+  }
+
+  .coach-button {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px !important;
+  }
+
+  .coach-badge {
+    top: -4px;
+    right: -4px;
+    font-size: 0.42rem;
+    padding: 1px 3px;
+    border-width: 1px;
+  }
+
+  .notis-badge {
+    top: 1px;
+    right: 1px;
+    width: 7px;
+    height: 7px;
+    border-width: 1.5px;
+  }
+
+  .info-horizontal {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .section-row {
+    padding: 0.875rem;
+    min-height: auto;
+  }
+
+  .section-text h3 {
+    font-size: 0.95rem;
+  }
+
+  .section-text p {
+    font-size: 0.78rem;
+  }
+
+  .section-tag-group {
+    gap: 0.45rem;
+    min-width: 0;
+  }
+
+  .section-tag {
+    width: auto;
+    min-width: 62px;
+    font-size: 0.68rem;
+    padding: 0.25rem 0.45rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-left {
+    gap: 0.45rem;
+  }
+
+  .inicio-brand-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 1.25rem;
+  }
+
+  .header-right {
+    gap: 0.3rem;
+  }
+
+  .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .icono-notis,
+  .icono-perfil,
+  .coach-button .icono-coach {
+    width: 24px;
+    height: 24px;
+  }
+
+  .coach-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .coach-badge {
+    font-size: 0.38rem;
+    padding: 0 3px;
+  }
+
+  .info-horizontal {
+    gap: 0.35rem;
+  }
+
+  .info-block p {
+    font-size: 0.95rem;
+  }
+
+  .motivacion {
+    font-size: 0.58rem;
+  }
+
+  .section-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .section-text p {
+    font-size: 0.72rem;
+  }
+}
+
+/* ============================
+   ICONOS SVG DEL HEADER
+============================ */
+
+.icono-notis {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  position: relative;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <path d='M12 2a6 6 0 00-6 6v4.2l-1.4 2.3A1 1 0 005 16h14a1 1 0 00.8-1.6L18 12.2V8a6 6 0 00-6-6z'/>\
+    <path d='M9 18a3 3 0 006 0'/>\
+  </svg>");
+}
+
+/* Icono de perfil */
+.icono-perfil {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(0) invert(1);
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='white' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <circle cx='12' cy='8' r='4'/>\
+    <path d='M6 20c0-3 2.5-5 6-5s6 2 6 5' stroke='white' stroke-width='2' fill='none' stroke-linecap='round'/>\
+  </svg>");
+}
+
+/* Icono del coach IA en Inicio */
+.coach-button .icono-coach {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg fill='none' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>\
+    <path d='M12 4.5V19.5' stroke='white' stroke-width='2.4' stroke-linecap='round'/>\
+    <path d='M4.5 12H19.5' stroke='white' stroke-width='2.4' stroke-linecap='round'/>\
+    <path d='M6.6 6.6L17.4 17.4' stroke='white' stroke-width='2.4' stroke-linecap='round'/>\
+    <path d='M17.4 6.6L6.6 17.4' stroke='white' stroke-width='2.4' stroke-linecap='round'/>\
+  </svg>");
+}
+
+/* BOTÓ COACH IA - destacat */
+.coach-button {
+  position: relative;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5), 0 2px 8px rgba(0,0,0,0.3);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+  animation: coach-pulse 2.8s ease-in-out infinite;
+}
+
+.coach-button:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.75), 0 4px 12px rgba(0,0,0,0.4);
+  transform: scale(1.07);
+  animation: none;
+}
+
+@keyframes coach-pulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.45), 0 2px 8px rgba(0,0,0,0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.75), 0 2px 8px rgba(0,0,0,0.3);
+  }
+}
+
+/* Etiqueta "IA" sobre el botó */
+.coach-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #a78bfa;
+  color: white;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 1px 4px;
+  border-radius: 4px;
+  border: 1.5px solid #101828;
+  line-height: 1.4;
+}
+
+/* BADGE NOTIFICACIONS */
+.notis-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a78bfa;
+  border: 2px solid #101828;
+  display: block;
+  filter: none;
+}
+
+@media (max-width: 480px) {
+  .coach-button {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 10px !important;
+  }
+
+  .coach-button .icono-coach {
+    width: 28px !important;
+    height: 28px !important;
+    background-size: 82% !important;
+  }
+
+  .coach-badge {
+    top: -4px !important;
+    right: -4px !important;
+    font-size: 0.42rem !important;
+    padding: 1px 3px !important;
+    border-width: 1px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .coach-button {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .coach-button .icono-coach {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .coach-badge {
+    font-size: 0.38rem !important;
+    padding: 0 3px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 0.45rem !important;
+  }
+
+  .header-right {
+    margin-top: 0.25rem !important;
+  }
+
+  .inicio-title {
+    font-size: 1.28rem !important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.15rem !important;
+  }
+
+  .inicio-subtitle {
+    font-size: 0.82rem !important;
+    line-height: 1.3 !important;
+    margin-top: 0.2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    margin-top: 0.65rem !important;
+  }
+
+  .header-right {
+    margin-top: 0.35rem !important;
+  }
+
+  .inicio-title {
+    font-size: 1.12rem !important;
+    margin-top: 0 !important;
+  }
+
+  .inicio-subtitle {
+    font-size: 0.74rem !important;
+    margin-top: 0.18rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .header {
+    margin-top: 0.75rem !important;
+  }
+
+  .header-right {
+    margin-top: 0.4rem !important;
+  }
+
+  .inicio-title {
+    font-size: 1rem !important;
+    margin-top: 0 !important;
+  }
+
+  .inicio-subtitle {
+    font-size: 0.68rem !important;
+    margin-top: 0.15rem !important;
+  }
+}

@@ -1,0 +1,622 @@
+/* ============================
+   PÁGINA GENERAL
+============================ */
+
+.crear-page {
+  background-color: #101828;
+  color: white;
+  padding: 1.25rem 1rem calc(96px + env(safe-area-inset-bottom));
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.crear-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.15;
+}
+
+.crear-subtitle {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  line-height: 1.35;
+}
+
+/* ============================
+   STEPS
+============================ */
+
+.crear-steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #1e293b;
+  color: #a78bfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border: 2px solid #475569;
+  transition: 0.25s ease;
+  flex-shrink: 0;
+}
+
+.step.active {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+  border-color: #a78bfa;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+  transform: scale(1.1);
+}
+
+/* ============================
+   PASO 1 — UPLOAD VIDEO
+============================ */
+
+.upload-box {
+  background-color: #1d2939;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.upload-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.upload-note {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.upload-area {
+  background-color: rgba(255,255,255,0.02);
+  border: 2px dashed #6366f1;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  color: #cbd5e1;
+  transition: 0.25s ease;
+  box-sizing: border-box;
+}
+
+.upload-area:hover {
+  background-color: rgba(99,102,241,0.08);
+  box-shadow: 0 0 12px rgba(99,102,241,0.4);
+}
+
+.upload-icon {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload-area input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.25s ease;
+  border: none;
+}
+
+.upload-btn:hover {
+  box-shadow: 0 0 12px rgba(167,139,250,0.6);
+  transform: translateY(-2px);
+}
+
+/* ============================
+   PASO 2 — FORMULARIO
+============================ */
+
+.form-box {
+  background-color: #1d2939;
+  border-radius: 14px;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+
+.form-box label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  min-width: 0;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+  margin-top: 0.45rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background-color: #1e293b;
+  color: white;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-box input:hover,
+.form-box textarea:hover,
+.form-box select:hover {
+  border-color: #475569;
+}
+
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 10px rgba(167,139,250,0.4);
+  outline: none;
+}
+
+.form-box textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* PLACEHOLDERS UNIFICADOS */
+.input-titulo::placeholder,
+.textarea-descripcion::placeholder,
+.input-link::placeholder,
+.input-competencia::placeholder,
+.input-nivel::placeholder {
+  font-family: "Inter", sans-serif;
+  color: #94a3b8;
+  opacity: 1;
+}
+
+/* FILE INPUT MODERNO */
+.file-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.file-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-button {
+  background-color: #1e293b;
+  border: 2px solid #334155;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.file-button:hover {
+  border-color: #6366f1;
+  box-shadow: 0 0 10px rgba(99,102,241,0.4);
+  transform: translateY(-2px);
+}
+
+.file-name {
+  font-size: 0.85rem;
+  color: #a78bfa;
+  text-align: left;
+  padding-left: 4px;
+  word-break: break-all;
+}
+
+/* ============================
+   PASO 3 — COMPETENCIAS
+============================ */
+
+.competencia-search-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.input-competencia {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.competencia-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #1e293b;
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  z-index: 999;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.competencia-dropdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.competencia-dropdown-item:hover {
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.dropdown-cap-name {
+  font-size: 0.88rem;
+  color: white;
+  font-weight: 500;
+}
+
+.dropdown-cap-group {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.competencia-list {
+  background-color: #1e293b;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.competencia-list.vacia {
+  padding: 0 !important;
+  margin-top: 0 !important;
+}
+
+.competencia-tag {
+  background-color: #475569;
+  color: white;
+  padding: 0.32rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+}
+
+.competencia-tag-remove {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.15s ease;
+}
+
+.competencia-tag-remove:hover {
+  color: #f87171;
+}
+
+/* ============================
+   VISIBILIDAD
+============================ */
+
+.visibility-segmented {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1e293b;
+  padding: 0.35rem;
+  border-radius: 12px;
+  gap: 0.4rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 0.4rem;
+}
+
+.seg-item {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s ease;
+  min-width: 0;
+}
+
+.seg-item:hover {
+  background-color: rgba(255,255,255,0.06);
+}
+
+.seg-item.active {
+  background-color: #6366f1;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(99,102,241,0.4);
+}
+
+.seg-item.disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background-color: #2a2f3a !important;
+  border-color: #3a3f4a !important;
+  color: #94a3b8 !important;
+}
+
+/* ============================
+   BOTONES GENERALES
+============================ */
+
+.siguiente-btn,
+.atras-btn {
+  background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.siguiente-btn:hover,
+.atras-btn:hover {
+  box-shadow: 0 0 12px rgba(167,139,250,0.6);
+  transform: translateY(-2px);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+.form-buttons .siguiente-btn,
+.form-buttons .atras-btn {
+  flex: 1;
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width: 480px) {
+  .crear-page {
+    padding: 1rem 0.85rem calc(92px + env(safe-area-inset-bottom));
+  }
+
+  .crear-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .crear-subtitle {
+    font-size: 0.84rem;
+    margin-bottom: 1rem;
+  }
+
+  .crear-steps {
+    gap: 0.65rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .step {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+    border-width: 1.5px;
+  }
+
+  .upload-box,
+  .form-box {
+    max-width: 100%;
+    border-radius: 16px;
+    padding: 1rem 0.9rem;
+    gap: 1rem;
+  }
+
+  .upload-title {
+    font-size: 1rem;
+  }
+
+  .upload-note {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .upload-area {
+    padding: 1.15rem 0.85rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+
+  .upload-icon {
+    font-size: 1.7rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .upload-btn,
+  .file-button {
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    font-size: 0.82rem;
+  }
+
+  .form-box label {
+    font-size: 0.8rem;
+  }
+
+  .form-box input,
+  .form-box textarea,
+  .form-box select {
+    padding: 0.68rem;
+    border-radius: 9px;
+    font-size: 0.82rem;
+  }
+
+  .form-box textarea {
+    min-height: 78px;
+  }
+
+  .file-name {
+    font-size: 0.74rem;
+  }
+
+  .competencia-dropdown {
+    border-radius: 9px;
+    max-height: 180px;
+  }
+
+  .competencia-dropdown-item {
+    padding: 8px 10px;
+  }
+
+  .dropdown-cap-name {
+    font-size: 0.78rem;
+  }
+
+  .dropdown-cap-group {
+    font-size: 0.64rem;
+  }
+
+  .competencia-list {
+    padding: 0.45rem;
+    border-radius: 9px;
+    gap: 0.35rem;
+    margin-top: 0.4rem;
+  }
+
+  .competencia-tag {
+    padding: 0.26rem 0.5rem;
+    border-radius: 7px;
+    font-size: 0.68rem;
+  }
+
+  .competencia-tag-remove {
+    font-size: 0.9rem;
+  }
+
+  .visibility-segmented {
+    padding: 0.25rem;
+    gap: 0.25rem;
+    border-radius: 10px;
+  }
+
+  .seg-item {
+    padding: 0.55rem 0.45rem;
+    font-size: 0.76rem;
+    border-radius: 7px;
+  }
+
+  .siguiente-btn,
+  .atras-btn {
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 0.84rem;
+  }
+
+  .form-buttons {
+    gap: 0.55rem;
+    margin-top: 0.55rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .crear-page {
+    padding: 0.9rem 0.7rem calc(88px + env(safe-area-inset-bottom));
+  }
+
+  .crear-title {
+    font-size: 1.2rem;
+  }
+
+  .crear-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .step {
+    width: 25px;
+    height: 25px;
+    font-size: 0.72rem;
+  }
+
+  .upload-box,
+  .form-box {
+    padding: 0.9rem 0.75rem;
+  }
+
+  .upload-title {
+    font-size: 0.92rem;
+  }
+
+  .upload-note,
+  .form-box label,
+  .file-name {
+    font-size: 0.72rem;
+  }
+
+  .form-box input,
+  .form-box textarea,
+  .form-box select,
+  .upload-btn,
+  .file-button,
+  .seg-item,
+  .siguiente-btn,
+  .atras-btn {
+    font-size: 0.76rem;
+  }
+
+  .competencia-tag {
+    font-size: 0.64rem;
+  }
+}

@@ -1,0 +1,265 @@
+.info-container {
+  min-height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.info-box {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* LOGO */
+.info-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.info-logo-asterisk {
+  font-size: 1.4rem;
+  color: #a78bfa;
+  line-height: 1;
+}
+
+.info-logo-open {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+.info-logo-kx {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.08em;
+}
+
+/* TÍTOL */
+.info-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+/* TEXTS */
+.info-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+.info-subtitle {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+  margin: 0 0 0.75rem;
+}
+
+/* CARDS */
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.info-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 0.4rem;
+}
+
+.info-card p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* CONTACTE */
+.info-contacto {
+  background: rgba(167,139,250,0.07);
+  border: 1px solid rgba(167,139,250,0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-contacto h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #c4b5fd;
+  margin: 0 0 0.5rem;
+}
+
+.info-contacto p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.info-contacto p:last-child {
+  margin: 0;
+}
+
+.info-contacto a {
+  color: #a78bfa;
+  text-decoration: none;
+}
+
+.info-contacto a:hover {
+  text-decoration: underline;
+}
+
+/* VOLVER */
+.info-link {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.35);
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s;
+}
+
+.info-link:hover {
+  color: rgba(255,255,255,0.65);
+}
+
+/* ===== INFORMACION MOBILE SIZE FIX ===== */
+@media (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .info-container {
+    padding: 1rem 0.8rem;
+    align-items: flex-start;
+  }
+
+  .info-box {
+    max-width: 100%;
+  }
+
+  .info-logo {
+    gap: 6px;
+    margin-bottom: 1.3rem;
+  }
+
+  .info-logo-asterisk {
+    font-size: 1.15rem;
+  }
+
+  .info-logo-open,
+  .info-logo-kx {
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+  }
+
+  .info-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .info-text {
+    font-size: 0.74rem;
+    line-height: 1.45;
+    margin-bottom: 0.9rem;
+  }
+
+  .info-subtitle {
+    font-size: 0.62rem;
+    margin-bottom: 0.55rem;
+  }
+
+  .info-cards {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-card,
+  .info-contacto {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .info-card h3,
+  .info-contacto h3 {
+    font-size: 0.76rem;
+  }
+
+  .info-card p,
+  .info-contacto p,
+  .info-link {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .info-contacto {
+    margin-bottom: 1rem;
+  }
+
+  .info-contacto p {
+    margin-bottom: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .info-container {
+    padding: 0.85rem 0.65rem;
+  }
+
+  .info-logo-open,
+  .info-logo-kx {
+    font-size: 0.86rem;
+  }
+
+  .info-title {
+    font-size: 0.96rem;
+  }
+
+  .info-text,
+  .info-card p,
+  .info-contacto p,
+  .info-link {
+    font-size: 0.66rem;
+  }
+
+  .info-card h3,
+  .info-contacto h3 {
+    font-size: 0.72rem;
+  }
+
+  .info-subtitle {
+    font-size: 0.58rem;
+  }
+}
